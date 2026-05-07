@@ -18,11 +18,11 @@ class TodoApp extends react.Component {
     // let todoId = count++
     let todoDescription = document.getElementById("todoDescription").value;
     let todoDueDate = document.getElementById("tododuedate").value;
-    let todoCompletionStatus;
-    let todoStatus;
-    let todoPriority;
-    let todoCreationDate;
-    let todoUpdationDate;
+    let todoCompletionStatus = document.getElementById("todocompletionStatus").value
+    let todoStatus = document.getElementById("todoStatus").value;
+    let todoPriority = document.getElementById("todoPriority").value
+    let todoCreationDate = Date.now()
+    let todoUpdationDate = Date.now()
 
     console.log(todoname);
     if (!todoname) {
@@ -32,6 +32,11 @@ class TodoApp extends react.Component {
         name: todoname,
         desc: todoDescription,
         duedate: todoDueDate,
+        completionStatus: todoCompletionStatus,
+        status: todoStatus,
+        todopriority:todoPriority,
+        todoCreationdate: todoCreationDate,
+        todoUpdationdate : todoUpdationDate
       };
       // this.todolist.push(todoname)
 
@@ -83,6 +88,15 @@ class TodoApp extends react.Component {
             </select><br/><br/>
             <input id="todocompletionStatus" type="checkbox" />
             <label >Completed</label><br/>
+             <label >
+                ToDo Status
+            </label>
+            <select id="todoStatus" >
+                <option>To Do</option>
+                <option>In Progress</option>
+                <option>IN Review</option>
+                <option>Done</option>
+            </select><br/>
 
             <button onClick={() => this.addTodo()}>Add Todo</button>
             <button onClick={this.handleClose}>Cancel</button>
