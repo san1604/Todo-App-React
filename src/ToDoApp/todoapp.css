@@ -1,0 +1,64 @@
+.dailog-box {
+    width: 325px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid black;
+    padding: 20px;
+    z-index: 1000;
+}
+.listStyle
+{
+    list-style-type: none;
+}
+.todoListItem{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+}
+.todoListItem-highpriority{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    border: 1px solid #ff0000;
+}
+.todoListItem-mediumpriority{
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(240, 125, 2, 0.382);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 8px;
+    border: 1px solid rgba(240, 125, 2, 1);
+}
+.title{
+    font-weight: 700;
+}
+.description{
+    font-size: small;
+}
+.date{
+    
+    display: flex;
+    justify-content: space-between;
+    
+}
+.completionStatus{
+    align-content: center;
+}
+.todoDataCard{
+    margin: 12px;
+    width: 100%;
+}
+.creationdate{
+    font-size: x-small;
+}
+.duedate{
+    font-size: x-small;
+    margin-left: auto;
+}
